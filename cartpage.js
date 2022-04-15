@@ -32,7 +32,7 @@ totalo += parseInt(itemoflocal[i].price)
     
     <div class="removediv">
     
-    <button class="remove-from-cart"  onclick="removecartclicked(${i})">Remove</button>
+    <button class="remove-from-cart"  onclick="cartClicked(${i})">Remove</button>
     </div>
     
     
@@ -47,7 +47,7 @@ totalo += parseInt(itemoflocal[i].price)
     totalprice.innerText=totalo
     }
 }
-function removecartclicked(cardno){
+function cartClicked(cardno){
     location.reload()
     itemoflocal.splice(cardno,1)
    localStorage.setItem("listofproduct", JSON.stringify(itemoflocal))
@@ -58,7 +58,7 @@ function removecartclicked(cardno){
 if(itemoflocal.length!==0){
 
     
-    function placeorderclicked(){
+    function orderClicked(){
         location.href="orderplaced.html"
         localStorage.clear()
     
